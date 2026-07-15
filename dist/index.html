@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KRAFT | Mobiliário Infantil</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/fivicon.png" />
+    <!-- Open Graph / Share Preview -->
+    <meta property="og:title" content="KRAFT | Mobiliário Infantil" />
+    <meta property="og:description" content="Mobiliário Infantil com afeto, sofisticação e acolhimento." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/background.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/background.png" />
+    
+    <!-- Phosphor Icons -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/css/style.css" />
+    <script type="module" crossorigin src="/assets/index-pmi8NsWv.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-cj8FlpmP.css">
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Background Image -->
+      <div class="bg-image" style="background-image: url('/background.png');"></div>
+      <div class="bg-overlay"></div>
+
+      <!-- Main Content -->
+      <main class="content">
+        
+        <!-- Header -->
+        <header class="header reveal">
+          <div class="profile-pic">
+            <div class="profile-inner">
+              <img src="/kraftwrklogo.png" alt="KRAFT Logo" class="profile-logo" />
+            </div>
+          </div>
+          <h2 class="title">KRAFT WRK</h2>
+          <p class="subtitle">Mobiliário Infantil com afeto, sofisticação e acolhimento.</p>
+        </header>
+
+        <!-- Links Section -->
+        <section class="links-section reveal" style="--delay: 0.1s">
+          <!-- Main CTA -->
+          <a href="https://www.kraftwrk.com.br/" target="_blank" class="link-btn primary-btn">
+            <div class="btn-inner">
+              <span class="btn-icon icon-globe"></span>
+              <span>Acesse nosso Site</span>
+            </div>
+          </a>
+
+          <!-- Other Links -->
+          <a href="https://api.whatsapp.com/send/?phone=554396585856&text&type=phone_number&app_absent=0" target="_blank" class="link-btn wpp-btn">
+            <div class="btn-inner">
+              <span class="btn-icon icon-whatsapp"></span>
+              <span>WhatsApp Orçamento</span>
+            </div>
+          </a>
+
+          <a href="https://api.whatsapp.com/send/?phone=554332011220&text&type=phone_number&app_absent=0" target="_blank" class="link-btn wpp-btn">
+            <div class="btn-inner">
+              <span class="btn-icon icon-whatsapp"></span>
+              <span>WhatsApp Produção</span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/kraftwrk/" target="_blank" class="link-btn social-btn">
+            <div class="btn-inner">
+              <span class="btn-icon icon-instagram"></span>
+              <span>Instagram</span>
+            </div>
+          </a>
+
+          <a href="https://www.facebook.com/kraftwrk" target="_blank" class="link-btn social-btn">
+            <div class="btn-inner">
+              <span class="btn-icon icon-facebook"></span>
+              <span>Facebook</span>
+            </div>
+          </a>
+
+          <a href="https://br.pinterest.com/kraftwrk/" target="_blank" class="link-btn social-btn pinterest-btn">
+            <div class="btn-inner">
+              <span class="btn-icon icon-pinterest"></span>
+              <span>Pinterest</span>
+            </div>
+          </a>
+        </section>
+
+        <!-- Carousel (Portfólio) -->
+        <section class="portfolio-section reveal" style="--delay: 0.2s">
+          <div class="section-header">
+            <h3>Nosso Portfólio</h3>
+            <div class="line"></div>
+          </div>
+          
+          <div class="carousel-container">
+            <div class="carousel-inner">
+              <div class="carousel-track" id="carouselTrack">
+                <!-- Slide 1 -->
+                <div class="carousel-slide">
+                  <img src="/cama_casal_de_madeira.jpg" alt="Cama Casal de Madeira" />
+                  <div class="slide-content">
+                    <h4>Cama de Casal</h4>
+                    <p>Feitas em madeira maciça com máxima durabilidade.</p>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                  <img src="/armario_portal.jpg" alt="Armário Portal" />
+                  <div class="slide-content">
+                    <h4>Armário Portal</h4>
+                    <p>Design sofisticado e amplo espaço de organização.</p>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                  <img src="/mezanino_quarto_infantil.jpg" alt="Mezanino Quarto Infantil" />
+                  <div class="slide-content">
+                    <h4>Mezanino Infantil</h4>
+                    <p>Diversão, aproveitamento de espaço e segurança.</p>
+                  </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                  <img src="/triliche_infantil.jpg" alt="Triliche Infantil" />
+                  <div class="slide-content">
+                    <h4>Triliche Infantil</h4>
+                    <p>Solução inteligente e lúdica para quartos compartilhados.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="carousel-controls">
+              <button class="nav-btn prev" id="prevBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <div class="dots" id="carouselDots"></div>
+              <button class="nav-btn next" id="nextBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="location-section reveal" style="--delay: 0.3s">
+          <a href="https://maps.google.com/?q=Av+Santa+Catarina,+447+-+Apucarana/PR" target="_blank" class="link-btn pinterest-btn">
+            <div class="btn-inner">
+              <span class="btn-icon icon-location"></span>
+              <span>Onde estamos</span>
+            </div>
+          </a>
+        </section>
+
+      </main>
+      
+      <footer class="footer reveal" style="--delay: 0.4s">
+        <div class="footer-links">
+          <a href="/politicas.html">Políticas de Privacidade</a>
+          <span>•</span>
+          <a href="/seguranca.html">Termos de Segurança</a>
+        </div>
+        <p class="copyright">© 2026 KRAFT. Todos os direitos reservados.</p>
+        <div class="footer-logo">
+          <img src="/logobmkpreta.png" alt="BMK Logo" class="bmk-logo" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
