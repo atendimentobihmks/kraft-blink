@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KRAFT | Termos de Segurança</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/fivicon.png" />
+    <!-- Open Graph / Share Preview -->
+    <meta property="og:title" content="KRAFT | Termos de Segurança" />
+    <meta property="og:description" content="Nossas diretrizes de cibersegurança e integridade de dados." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/background.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/background.png" />
+    
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Background Image -->
+      <div class="bg-image" style="background-image: url('/background.png');"></div>
+      <div class="bg-overlay"></div>
+
+      <!-- Main Content -->
+      <main class="content">
+        
+        <!-- Header -->
+        <header class="doc-header">
+          <a href="/" class="back-link" title="Voltar para a Home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </a>
+          <h1 class="doc-title">Segurança</h1>
+        </header>
+
+        <!-- Document Content Card -->
+        <section class="doc-content">
+          <h3>1. Compromisso com Cibersegurança</h3>
+          <p>A página da KRAFT segue protocolos modernos e as melhores práticas da BMK para garantir a estabilidade operacional e a integridade de todos os visitantes.</p>
+
+          <h3>2. Navegação Segura (HTTPS)</h3>
+          <p>O site é compilado com foco em otimização de banda de rede e obriga o tráfego de dados por canais criptografados via protocolo <strong>HTTPS (SSL/TLS)</strong>, evitando interceptação de informações (ataques do tipo Man-in-the-Middle).</p>
+
+          <h3>3. Proteção e Prevenção XSS</h3>
+          <p>Nossa equipe realiza revisões contínuas no código fonte para impedir injeção de scripts maliciosos (Cross-Site Scripting - XSS) ou injeções indesejadas no DOM do navegador.</p>
+
+          <h3>4. Redirecionamento Blindado</h3>
+          <p>Para garantir que sites terceiros não herdem controle sobre esta página aberta em novas janelas, todos os links externos de direcionamento contam com a diretiva de proteção <strong>rel="noopener noreferrer"</strong>.</p>
+
+          <h3>5. Isolamento de Credenciais</h3>
+          <p>Toda comunicação técnica necessária para tags e pixels é gerenciada por servidores isolados ou build-time variables, mantendo chaves de APIs confidenciais distantes do acesso público de visitantes maliciosos.</p>
+        </section>
+
+      </main>
+      
+      <footer class="footer">
+        <p class="copyright">© 2026 KRAFT. Todos os direitos reservados.</p>
+        <div class="footer-logo">
+          <img src="/logobmkpreta.png" alt="BMK Logo" class="bmk-logo" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

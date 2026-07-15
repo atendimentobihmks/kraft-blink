@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* KRAFT Brand Palette */
+  --caramelo: #b27440;
+  --rosa-claro: #fcefeF;
+  --azul-suave: #7dbbc3;
+  --malva: #995d81;
+  --verde-acinzentado: #679289;
+
+  /* UI Colors */
+  --bg-cream: #faf7f5;
+  --text-dark: #2c1a11;
+  --text-muted: #6e5e55;
+  --border-light: rgba(178, 116, 64, 0.12);
+  
+  --font-title: 'Bitter', serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  font-family: var(--font-body);
+  background: 
+    /* Degradê rosa claro */
+    linear-gradient(
+      to bottom,
+      rgba(252, 239, 239, 0.9) 0%,
+      rgba(252, 239, 239, 0.9) 50%,
+      rgba(252, 239, 239, 0.4) 100%
+    ),
+    /* Textura de grade cinza (Camada do Meio, por baixo do degradê) */
+    linear-gradient(rgba(128, 128, 128, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 128, 128, 0.25) 1px, transparent 1px),
+    /* Fundo creme de base (Última Camada) */
+    var(--bg-cream);
+  background-size: 100% 100%, 24px 24px, 24px 24px, 100% 100%;
+  background-attachment: fixed;
+  color: var(--text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fundo limpo sem blurs para um visual mais sólido */
+
+/* Main Content Wrapper */
+.content {
+  width: 100%;
+  max-width: 480px;
+  padding: 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Premium Gradient Border using KRAFT colors */
+.profile-pic {
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--caramelo), var(--azul-suave), var(--malva), var(--verde-acinzentado));
+  box-shadow: 0 8px 24px rgba(178, 116, 64, 0.15);
+}
+
+.profile-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-logo {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-dark);
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Links Section */
+.links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Core Link Buttons */
+.link-btn {
+  display: block;
+  text-decoration: none;
+  border-radius: 1.25rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 12px rgba(44, 26, 17, 0.03);
+}
+
+.btn-inner {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 1rem; /* Reduzido padding lateral para aproximar da borda */
+  gap: 0.6rem; /* Encurtado o espaco entre icone e texto */
+}
+
+/* Base button text & icon style */
+.btn-inner > i,
+.btn-icon {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+}
+
+.btn-icon {
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.icon-globe {
+  -webkit-mask-image: url('/globe.svg');
+  mask-image: url('/globe.svg');
+}
+
+.icon-whatsapp {
+  -webkit-mask-image: url('/whatsapp.svg');
+  mask-image: url('/whatsapp.svg');
+}
+
+.icon-instagram {
+  -webkit-mask-image: url('/instagram.svg');
+  mask-image: url('/instagram.svg');
+}
+
+.icon-facebook {
+  -webkit-mask-image: url('/facebook.svg');
+  mask-image: url('/facebook.svg');
+}
+
+.icon-pinterest {
+  -webkit-mask-image: url('/pinterest.svg');
+  mask-image: url('/pinterest.svg');
+}
+
+.icon-location {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E");
+}
+
+.btn-inner span:not(.btn-icon) {
+  flex: 1;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  color: var(--text-dark);
+  text-align: left; /* Garante alinhamento a esquerda */
+}
+
+.btn-inner > i {
+  font-size: 1.4rem;
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.link-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(44, 26, 17, 0.08);
+}
+
+.link-btn:hover .icon-circle {
+  transform: translate(2px, -2px);
+}
+
+/* Max 3 Colors on Buttons (Primary, WhatsApp, Social) */
+
+/* 1. Primary - Caramelo (Solid) */
+.primary-btn {
+  background-color: var(--caramelo);
+  border-left: 5px solid #ffffff;
+  box-shadow: 0 4px 16px rgba(178, 116, 64, 0.25);
+}
+.primary-btn .btn-inner span, 
+.primary-btn .btn-inner i {
+  color: #ffffff;
+}
+.primary-btn .icon-circle {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.primary-btn:hover {
+  box-shadow: 0 12px 28px rgba(178, 116, 64, 0.35);
+}
+
+/* 2. WhatsApp Buttons - Azul Suave (Solid/Semi-Solid) */
+.wpp-btn {
+  background-color: #ffffff;
+  border-left: 5px solid var(--azul-suave);
+  color: var(--azul-suave);
+}
+.wpp-btn .btn-inner span:not(.btn-icon) {
+  color: var(--azul-suave);
+}
+.wpp-btn:hover {
+  background-color: rgba(125, 187, 195, 0.04);
+}
+
+/* 3. Social Media Buttons - Malva (Subtle Outlines/Accents) */
+.social-btn {
+  background-color: #ffffff;
+  border-left: 5px solid var(--malva);
+  color: var(--malva);
+}
+.social-btn .btn-inner span:not(.btn-icon) {
+  color: var(--malva);
+}
+.social-btn:hover {
+  background-color: rgba(153, 93, 129, 0.04);
+}
+
+/* Left colored accents for design richness (uses Verde Acinzentado) */
+.pinterest-btn {
+  border-left: 5px solid var(--verde-acinzentado);
+  color: var(--verde-acinzentado);
+}
+.pinterest-btn .btn-inner span:not(.btn-icon) {
+  color: var(--verde-acinzentado);
+}
+.pinterest-btn:hover {
+  background-color: rgba(103, 146, 137, 0.04);
+}
+
+/* Carousel Section */
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-header h3 {
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-header .line {
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(to right, var(--border-light), transparent);
+}
+
+.carousel-container {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 24px rgba(44, 26, 17, 0.03);
+}
+
+.carousel-inner {
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+  aspect-ratio: 4/5;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(44, 26, 17, 0.85) 0%, transparent 100%);
+  color: #fff;
+}
+
+.slide-content h4 {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.slide-content p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem 0.5rem;
+}
+
+.nav-btn {
+  background: var(--bg-cream);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: var(--caramelo);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(44, 26, 17, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--caramelo);
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* Location Section */
+.location-section {
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  padding: 2.5rem 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  width: 100%;
+  margin-top: auto;
+  font-weight: 500;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: var(--caramelo);
+}
+
+.footer-links span {
+  color: var(--border-light);
+}
+
+.footer i {
+  color: var(--malva);
+}
+
+.copyright {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Document Pages Styling (Privacy, Security) */
+.doc-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-link svg {
+  display: block;
+}
+
+.back-link:hover {
+  transform: translateX(-4px);
+  background: var(--caramelo);
+  color: #ffffff;
+  border-color: var(--caramelo);
+}
+
+.doc-title {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.doc-content {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 24px rgba(44, 26, 17, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: var(--text-dark);
+}
+
+.doc-content h3 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  color: var(--caramelo);
+}
+
+.doc-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.doc-content ul {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.doc-content li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Footer BMK Logo Styling */
+.footer-logo {
+  margin-top: 1.25rem;
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.bmk-logo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+}
