@@ -9,7 +9,7 @@ const dir = path.join(__dirname, 'public');
 try {
   const files = fs.readdirSync(dir);
   files.forEach(f => {
-    if (f.endsWith('.jpg') || f.endsWith('.png')) {
+    if (f.endsWith('.jpg') || f.endsWith('.png') || f.endsWith('.jpeg')) {
       // Ignorar a logo padrão e o background ja padronizados
       if (f === 'kraftwrklogo.png' || f === 'background.png') return;
 
